@@ -1,0 +1,114 @@
+/* Fuentes */
+@font-face {
+    font-family: 'Kozuka Gothic Pro';
+    src: url('Fonts/KozGoProBold.otf') format('opentype'),
+         url('Fonts/KozGoProLight.otf') format('opentype'),
+         url('Fonts/KozGoProMedium.otf') format('opentype'),
+         url('Fonts/KozGoProRegular.otf') format('opentype');
+  }
+  
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap');
+  
+
+
+
+  /* Variables de color */
+  :root {
+    --color-blanco: #F9F9F9;
+    --color-negro: #050505;
+    --color-amarillo: #ffee00;
+    --color-celeste: #12bcf0;
+    --color-morado: #a82be2;
+  }
+ 
+  
+
+
+  /* Configuración global */
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    color: var(--color-blanco);
+    background-color: var(--color-negro);
+  }
+  
+  html {
+    font-family: 'Kozuka Gothic Pro', Noto Sans JP, sans-serif;
+    font-size: 16px;
+    height: 100vh;
+  }
+  
+  /* Diseño de la página */
+  body {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.2fr 1fr 0.1fr;
+    gap: 0px 0px;
+    grid-template-areas: 
+      "Header"
+      "Main"
+      "Footer";
+  }
+  
+  header {
+    grid-area: Header;
+    text-align: center;
+    padding: 3rem;
+  }
+  
+  main {
+    grid-area: Main;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  footer {
+    grid-area: Footer;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.8rem;
+  }
+  strong{
+    color: #FF4D4D;
+  }
+  
+
+  
+  /* Estilos específicos de elementos */
+  .logo {
+    font-size: 7rem;
+    line-height: 6rem;
+    letter-spacing: 0.3rem;
+  }
+  
+  .slogan {
+    font-size: 1.7rem;
+    color: var(--color-celeste);
+  }
+  
+  .buttons {
+    display: flex;
+    font-size: 1.5rem;
+    line-height: 0.9rem;
+    color: var(--color-amarillo);
+    }
+
+    
+    .mainButton.buttons::before,
+    .mainButton.buttons::after {
+    content: "[ ";
+    line-height: 0rem;
+    padding: 0.3rem;
+    font-weight: bold;
+    color: var(--color-morado);
+    }
+    .mainButton.buttons::after{
+      content: " ]";
+    }
